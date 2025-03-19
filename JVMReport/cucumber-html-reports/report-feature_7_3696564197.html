@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>LoginWithValid</td>
-            <td>26 Feb 2025, 10:06</td>
+            <td>07 Mar 2025, 10:18</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">To Check then 1-2 taste Application Request a Quote Functionality</td>
-          <td      class="passed"    >7</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >2</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >4</td>
           <td >0</td>
           <td >0</td>
           <td class="total">7</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="27871536600">27.871</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="14540009800">14.540</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -171,7 +171,7 @@ $(document).ready(function() {
   </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">To Check then 1-2 taste Application Request a Quote Functionality</span>
   
@@ -189,12 +189,12 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">27.871</span>
+  <span class="lead-duration duration">14.540</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Request a Quote for a product</span>
   
@@ -205,16 +205,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
     
 
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -224,14 +224,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">User navigate to the product listing pages</span>
   
-  <span class="lead-duration duration">9.621</span>
+  <span class="lead-duration duration">7.221</span>
 
 </div>
 
@@ -257,7 +257,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User click on the Request a Quote button</span>
   
-  <span class="lead-duration duration">5.495</span>
+  <span class="lead-duration duration">4.309</span>
 
 </div>
 
@@ -279,11 +279,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">And</span>
   <span class="name">User should be redirected to the quote details page</span>
   
-  <span class="lead-duration duration">4.034</span>
+  <span class="lead-duration duration">3.007</span>
 
 </div>
 
@@ -291,6 +291,34 @@ $(document).ready(function() {
 
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>org.openqa.selenium.UnhandledAlertException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your quote list.}
+  (Session info: chrome=133.0.6943.143): Please select some product options before adding this product to your quote list.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AOJIHBP7', ip: '192.168.1.185', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.143, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54590}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa8da1b653bc7736ddb2ad51cbbe8dfd
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
+	at org.base.BaseClass.getCurrentURL(BaseClass.java:209)
+	at org.stepdefinitions.Quote.user_should_be_redirected_to_the_quote_details_page(Quote.java:39)
+	at &#10045;.User should be redirected to the quote details page(file:Quote.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -305,11 +333,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">User fill in the quote request form with valid details</span>
   
-  <span class="lead-duration duration">2.223</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -331,11 +359,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">User click on the Send Your Request button</span>
   
-  <span class="lead-duration duration">0.105</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -357,11 +385,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">an email should be triggered with an order number</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -383,11 +411,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">User should be redirected to the order confirmation page with the Order ID</span>
   
-  <span class="lead-duration duration">6.389</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 

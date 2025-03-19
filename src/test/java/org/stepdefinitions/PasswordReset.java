@@ -30,7 +30,7 @@ public class PasswordReset extends BaseClass {
 
 	@When("the user enters their registered email in the reser password textbox")
 	public void the_user_enters_their_registered_email_in_the_reser_password_textbox() {
-		lostpassword.enteremailforreset("mskabilan4@gmail.com");
+		lostpassword.enteremailforreset("test_email@12taste.com");
 	}
 
 	@When("the user clicks on the reset password button")

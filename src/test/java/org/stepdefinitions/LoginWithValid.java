@@ -27,7 +27,7 @@ public class LoginWithValid extends BaseClass {
 	@When("the user enters a valid password")
 	public void the_user_enters_a_valid_password() {
 
-		login.enterPassword("P@ssw0rd!@123");
+		login.enterPassword("test_email@12taste.com");
 	}
 
 	@When("the user clicks the login button")

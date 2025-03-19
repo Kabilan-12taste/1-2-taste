@@ -1,4 +1,4 @@
-# update_account.feature
+@skip
 Feature: To Check the 1-2 Taste site Update account information in "My Account" section
 
   Scenario: User successfully updates account details

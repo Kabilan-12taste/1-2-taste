@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="9.767523">
-    <testcase classname="To Check the 1-2 Taste Application Login Functionality" name="Verify user can log in with valid credentials" time="9.767523">
-        <system-out><![CDATA[Given the user is on the login page.........................................passed
-When the user enters a valid email..........................................passed
-And the user enters a valid password........................................passed
-And the user clicks the login button........................................passed
-Then the user should be redirected to the dashboard.........................passed
-]]></system-out>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="14.818836">
+    <testcase classname="To Check then 1-2 taste Application Request a Quote Functionality" name="Request a Quote for a product" time="14.818836">
+        <failure message="org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your quote list.}&#10;  (Session info: chrome=133.0.6943.143): Please select some product options before adding this product to your quote list.&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-AOJIHBP7', ip: '192.168.1.185', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.143, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55657}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: cbca375d7e910fd8e9d421e8f0b30967&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)&#13;&#10;&#9;at org.base.BaseClass.getCurrentURL(BaseClass.java:209)&#13;&#10;&#9;at org.stepdefinitions.Quote.user_should_be_redirected_to_the_quote_details_page(Quote.java:40)&#13;&#10;&#9;at ✽.User should be redirected to the quote details page(file:/C:/Users/Lenovo/eclipse-workspace/1-2-taste/src/test/resources/FeatureFiles/Quote.feature:6)&#13;&#10;"><![CDATA[Given User navigate to the product listing pages............................passed
+When User click on the Request a Quote button...............................passed
+And User should be redirected to the quote details page.....................failed
+And User fill in the quote request form with valid details..................skipped
+And User click on the Send Your Request button..............................skipped
+And an email should be triggered with an order number.......................skipped
+Then User should be redirected to the order confirmation page with the Order ID.skipped
+
+StackTrace:
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your quote list.}
+  (Session info: chrome=133.0.6943.143): Please select some product options before adding this product to your quote list.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-AOJIHBP7', ip: '192.168.1.185', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.143, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55657}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbca375d7e910fd8e9d421e8f0b30967
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
+	at org.base.BaseClass.getCurrentURL(BaseClass.java:209)
+	at org.stepdefinitions.Quote.user_should_be_redirected_to_the_quote_details_page(Quote.java:40)
+	at ✽.User should be redirected to the quote details page(file:/C:/Users/Lenovo/eclipse-workspace/1-2-taste/src/test/resources/FeatureFiles/Quote.feature:6)
+]]></failure>
     </testcase>
 </testsuite>

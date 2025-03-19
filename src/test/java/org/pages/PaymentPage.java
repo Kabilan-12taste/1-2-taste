@@ -143,7 +143,7 @@ public class PaymentPage extends BaseClass {
 	public void waitForPaymentSelection() {
 	    WebDriverWait wait = new WebDriverWait(driver, 300); // Waits for up to 300 seconds (5 minutes)
 
-	    System.out.println("🚨 Waiting for user to manually select a payment method...");
+	    System.out.println("Waiting for user to manually select a payment method...");
 
 	    wait.until(ExpectedConditions.or(
 	        ExpectedConditions.elementToBeSelected(driver.findElement(payWithUPI)),
@@ -153,6 +153,6 @@ public class PaymentPage extends BaseClass {
 	        ExpectedConditions.elementToBeSelected(driver.findElement(cashOnDelivery))
 	    ));
 
-	    System.out.println("✅ Payment method detected. Resuming automation...");
+	    System.out.println("Payment method detected. Resuming automation...");
 	}
 }

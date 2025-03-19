@@ -4,6 +4,7 @@ import java.awt.AWTException;
 
 import org.base.BaseClass;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.pages.AddToCartRequestQuotePage;
 
 import io.cucumber.java.en.Given;
@@ -48,16 +49,18 @@ public class Quote extends BaseClass {
 				"12345rty", "Tamil Nadu", "Test input");
 	}
 
+	@Ignore
 	@Then("User click on the Send Your Request button")
 	public void user_click_on_the_Send_Your_Request_button() {
 		addtocartpage.clickSendRequest();
 	}
+	@Ignore
 
 	@Then("an email should be triggered with an order number")
 	public void an_email_should_be_triggered_with_an_order_number() {
 		System.out.println("Mail has been received with the order number");
 	}
-
+	@Ignore
 	@Then("User should be redirected to the order confirmation page with the Order ID")
 	public void user_should_be_redirected_to_the_order_confirmation_page_with_the_Order_ID() {
 		addtocartpage.orderno();

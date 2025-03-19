@@ -133,14 +133,14 @@ public class AddToCartRequestQuotePage extends BaseClass {
 	        boolean isUpdated = wait.until(ExpectedConditions.textToBePresentInElement(cartCountElement, expectedCount));
 
 	        if (isUpdated) {
-	            System.out.println("✅ Cart count updated successfully! Current count: " + expectedCount);
+	            System.out.println("Cart count updated successfully! Current count: " + expectedCount);
 	        } else {
-	            System.out.println("❌ Cart count mismatch. Expected: " + expectedCount + ", but found: " + cartCountElement.getText());
+	            System.out.println("Cart count mismatch. Expected: " + expectedCount + ", but found: " + cartCountElement.getText());
 	        }
 
 	        return isUpdated;
 	    } catch (TimeoutException e) {
-	        System.out.println("❌ Cart count verification failed: Expected " + expectedCount + " but not updated in time.");
+	        System.out.println("Cart count verification failed: Expected " + expectedCount + " but not updated in time.");
 	        return false;
 	    }
 	}
