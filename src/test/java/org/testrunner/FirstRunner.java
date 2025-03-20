@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
     tags = "not @skip",
     plugin = {
         "pretty",
-        "html:target/cucumber-reports/cucumber-html-report",
+        "html:target/cucumber-reports/index.html",
         "json:target/cucumber-reports/cucumber.json",
         "junit:target/JunitReport/Junit.xml"
     },
