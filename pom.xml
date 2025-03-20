@@ -56,7 +56,7 @@
                     <parallel>none</parallel> <!-- Ensures tests run one by one -->
                     <threadCount>1</threadCount>
                     <includes>
-                        <include>**/TestRunner.java</include> <!-- Run the Cucumber test runner class -->
+                        <include>**/FirstRunner.java</include> <!-- Run the Cucumber test runner class -->
                     </includes>
                 </configuration>
             </plugin>
