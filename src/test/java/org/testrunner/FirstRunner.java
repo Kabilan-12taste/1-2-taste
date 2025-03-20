@@ -14,10 +14,11 @@ import io.cucumber.junit.CucumberOptions;
 	    tags = "not @skip",
 	    plugin = {
 	        "pretty",
-	        "html:target/HtmlReport",
-	        "json:target/cucumber-reports/CucumberReport.json",  // Ensure this is correct
+	        "html:target/cucumber-reports/cucumber-html-report",
+	        "json:target/cucumber-reports/cucumber.json",  // Ensure this is correct
 	        "junit:target/JunitReport/Junit.xml"
-	    }
+	    },
+	    monochrome = true
 	)
 
 public class FirstRunner {
