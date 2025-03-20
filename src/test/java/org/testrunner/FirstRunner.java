@@ -9,13 +9,17 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/FeatureFiles/LoginwithValid.feature", // Path to feature files
-		glue = "org.stepdefinitions", // Path to step definitions
-		tags = "not @skip", // If you have any specific tags to include/exclude
-		plugin = { "pretty", "html:./target/cucumber-reports/index.html", // Explicit relative path
-				"json:./target/cucumber-reports/cucumber.json", "junit:./target/JunitReport/Junit.xml" },
-
-		monochrome = true)
+@CucumberOptions(
+	    features = "src/test/resources/FeatureFiles/LoginwithValid.feature",
+	    glue = "org.stepdefinitions",
+	    tags = "not @skip",
+	    		plugin = {
+	    			    "pretty",
+	    			    "html:C:/ProgramData/Jenkins/.jenkins/workspace/1-2 Taste IN/target/cucumber-reports/index.html",
+	    			    "json:C:/ProgramData/Jenkins/.jenkins/workspace/1-2 Taste IN/target/cucumber-reports/cucumber.json",
+	    			    "junit:C:/ProgramData/Jenkins/.jenkins/workspace/1-2 Taste IN/target/JunitReport/Junit.xml"
+	    			}
+)
 
 public class FirstRunner {
 
