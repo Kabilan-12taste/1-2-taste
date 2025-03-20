@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 	    plugin = {
 	        "pretty",
 	        "html:target/HtmlReport",
-	        "json:target/cucumber-reports/CucumberReport.json",  // Ensure this is correct
+	        "json:target/cucumber-reports/cucumber.json",  // Ensure this is correct
 	        "junit:target/JunitReport/Junit.xml"
 	    }
 	)
@@ -25,7 +25,8 @@ public class FirstRunner {
 	@AfterClass
 	public static void jvm() {
 
-		JVMReport.generateJVMReport("target/JVMReport");
+		JVMReport.generateJVMReport("target/cucumber-reports/cucumber.json");
+
 
 
 	}
