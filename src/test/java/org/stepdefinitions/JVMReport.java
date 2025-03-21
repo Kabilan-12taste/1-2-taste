@@ -15,6 +15,12 @@ public class JVMReport {
         List<String> jsonFiles = new ArrayList<>();
         
         // Add the path to the JSON file(s)
+        File jsonFile = new File(jsonPath);
+        if (!jsonFile.exists()) {
+            System.out.println("ERROR: Cucumber JSON file not found! Path: " + jsonPath);
+            return;
+        }
+
         jsonFiles.add(jsonPath);
 
         // Configuration for the report
@@ -28,5 +34,6 @@ public class JVMReport {
         
         // Generate the report
         reportBuilder.generateReports();
+        System.out.println("JVM Report successfully generated at: " + reportOutputDirectory.getAbsolutePath());
     }
 }
