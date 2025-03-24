@@ -1,7 +1,5 @@
 package org.testrunner;
 
-import java.io.File;
-import org.junit.BeforeClass;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.stepdefinitions.JVMReport;
@@ -10,7 +8,6 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    strict = true,
     features = "src/test/resources/FeatureFiles/LoginwithValid.feature",
     glue = "org.stepdefinitions",
     tags = "not @skip",
@@ -18,12 +15,13 @@ import io.cucumber.junit.CucumberOptions;
         "pretty",
         "html:target/cucumber-reports/index.html",
         "json:target/cucumber-reports/Cucumber.json",
-        "junit:target/JunitReport/Junit.xml"
-    }
+        "junit:target/cucumber-reports/Cucumber.xml"
+    },
+    monochrome = true
 )
 public class FirstRunner {
     @AfterClass
-    public static void jvmReport() {
+    public static void generateReport() {
         System.out.println("Generating JVM Report...");
         JVMReport.generateJVMReport("target/cucumber-reports/Cucumber.json");
     }
