@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
     plugin = {
         "pretty",
         "html:target/cucumber-reports/index.html",
-        "json:target/cucumber-reports/cucumber.json",
+        "json:target/cucumber-reports/Cucumber.json",
         "junit:target/JunitReport/Junit.xml"
     }
 )
@@ -25,6 +25,6 @@ public class FirstRunner {
     @AfterClass
     public static void jvmReport() {
         System.out.println("Generating JVM Report...");
-        JVMReport.generateJVMReport("target/cucumber-reports/cucumber.json");
+        JVMReport.generateJVMReport("target/cucumber-reports/Cucumber.json");
     }
 }
