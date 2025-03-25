@@ -5,7 +5,7 @@
 	<groupId>1-2-taste</groupId>
 	<artifactId>1-2-taste</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>
@@ -54,15 +54,20 @@
 				<configuration>
 					<parallel>none</parallel> <!-- Ensures tests run one by one -->
 					<threadCount>1</threadCount>
+					<reportsDirectory>
+						${project.build.directory}/surefire-reports</reportsDirectory>
+
 				</configuration>
 			</plugin>
+
+
 		</plugins>
 	</build>
 
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-</properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
 </project>
 
