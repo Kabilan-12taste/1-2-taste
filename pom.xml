@@ -41,6 +41,13 @@
 			<artifactId>cucumber-reporting</artifactId>
 			<version>4.11.2</version>
 		</dependency>
+		
+		<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.3</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
@@ -53,26 +60,10 @@
 				<configuration>
 					<parallel>none</parallel>
 					<threadCount>1</threadCount>
-					<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-					<useFile>true</useFile>
-					<redirectTestOutputToFile>true</redirectTestOutputToFile>
+
 				</configuration>
 			</plugin>
 
-			<!-- Failsafe Plugin for Integration Tests (Optional) -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M5</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
