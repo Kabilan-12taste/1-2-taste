@@ -12,15 +12,15 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.14.0</version>
+			<version>4.8.0</version>
 		</dependency>
 
-		 <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-junit</artifactId>
-        <version>7.14.0</version>
-        <scope>test</scope>
-    </dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>4.8.0</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- JUnit (Ensure test execution works) -->
 		<dependency>
@@ -50,8 +50,6 @@
 			<artifactId>cucumber-reporting</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-		
-		
 
 		<!-- Apache POI (For Excel Handling) -->
 		<dependency>
@@ -87,8 +85,7 @@
 						</goals>
 						<configuration>
 							<jsonFiles>
-								<param>
-									target/cucumber-reports/CucumberReport.json</param>
+								<param>target/cucumber-reports/CucumberReport.json</param>
 							</jsonFiles>
 							<outputDirectory>target/cucumber-html-reports</outputDirectory>
 						</configuration>
