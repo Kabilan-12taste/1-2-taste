@@ -13,10 +13,8 @@ import io.cucumber.junit.CucumberOptions;
     tags = "not @skip",
     plugin = {
         "pretty",
-        "html:target/cucumber-reports/CucumberReport.html",  
-        "json:target/cucumber-reports/CucumberReport.json",
-        "junit:target/cucumber-reports/CucumberReport.xml",
-        "rerun:target/failed_scenarios.txt"
+        "html:target/cucumber-reports/index.html",
+        "json:target/cucumber-reports/CucumberReport.json"
     },
     monochrome = true
 )
