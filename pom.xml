@@ -2,6 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>1-2-taste</groupId>
 	<artifactId>1-2-taste</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -18,6 +19,14 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>4.8.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JUnit (Ensure test execution works) -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -39,33 +48,50 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
-			<version>4.11.2</version>
+			<version>5.0.0</version>
 		</dependency>
 
+		<!-- Apache POI (For Excel Handling) -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.3</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!-- Surefire Plugin for Unit Tests -->
+			<!-- Surefire Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>  <!-- Downgrade for better compatibility -->
+				<version>2.22.2</version>
 				<configuration>
-					<reportsDirectory>target/surefire-reports</reportsDirectory>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					<reportsDirectory>target/cucumber-reports</reportsDirectory>
 				</configuration>
 			</plugin>
 
-
+			<!-- Cucumber Reporting Plugin -->
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.0.0</version>
+				<executions>
+					<execution>
+						<id>report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<jsonFiles>
+								<param>target/cucumber-reports/CucumberReport.json</param>
+							</jsonFiles>
+							<outputDirectory>target/cucumber-html-reports</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
