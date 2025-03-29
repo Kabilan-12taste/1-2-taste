@@ -85,13 +85,28 @@
 						</goals>
 						<configuration>
 							<jsonFiles>
-								<param>target/cucumber-reports/CucumberReport.json</param>
+								<param>
+									target/cucumber-reports/CucumberReport.json</param>
 							</jsonFiles>
 							<outputDirectory>target/cucumber-html-reports</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+				<configuration>
+					<rerunFailingTestsCount>2</rerunFailingTestsCount>
+					<systemPropertyVariables>
+						<cucumber.options>--plugin
+							json:target/cucumber-reports/CucumberReport.json</cucumber.options>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
